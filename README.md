@@ -1,6 +1,3 @@
-Certainly, Ramez! Here’s a basic `README.md` template for a tool designed to scrape data from PadSplit. This README includes sections for project description, installation, usage, and other important details.
-
-```markdown
 # PadSplit Scraper
 
 ## Description

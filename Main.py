@@ -15,8 +15,8 @@ class MySpider(scrapy.Spider):
     def start_requests(self) :
         url = 'https://www.padsplit.com/api/auth/login'
         payload = {
-            "email": "taylorajolly@gmail.com",
-            "password": "6of*@@@nK^dzs"}
+            "email": "XXXXXXXXXXXXXXXXXXXXXXXXXX",
+            "password": "XXXXXXXXXXXXXXXXXXXXXXX"}
         headers = {
             'Content-Type': 'application/json',
             'Cookie': 'ajs_anonymous_id=655e640969ef481bab161b4fb6b83cfb; sessionid=q9g2opaddn6ns55uio0igklpe3mu3b1t'}

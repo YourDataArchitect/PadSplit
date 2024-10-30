@@ -1,4 +1,4 @@
-#PadSplit Scraper 🛬
+# PadSplit Scraper 🛬
 <div align="center">
 <img src="https://www.greatplacetowork.com/images/profiles/7044463/company_image_1.webp" alt="A sample image" width="400" height="300">
 </div>

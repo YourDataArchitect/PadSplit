@@ -3,8 +3,8 @@ name: Scheduled Data Scraping
 
 # Trigger the workflow on a schedule (e.g., daily at 2 am UTC)
 on:
-  schedule:
-    - cron: '45 07 * * *'  # This runs the workflow every day at 2 am UTC
+  #schedule:
+    #- cron: '45 07 * * *'  # This runs the workflow every day at 2 am UTC
   workflow_dispatch: # Allow manual run through GitHub interface
 
 # Define the job that GitHub Actions will run

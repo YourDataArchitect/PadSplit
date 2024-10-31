@@ -19,6 +19,7 @@ jobs:
     steps:
       - name: Check out the code
         uses: actions/checkout@v3  # Gets the code from your repository
+        
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -36,3 +37,9 @@ jobs:
           SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
         run: |
           python Main.py  # Run your Python script
+       # Upload the Excel file as an artifact
+      - name: Upload Excel file
+        uses: actions/upload-artifact@v3
+        with:
+          name: scraped-data  # Name of the artifact
+          path: results.xlsx  # Replace with the actual path to your Excel file

@@ -1,0 +1,38 @@
+# Name of the workflow, shown in the Actions tab
+name: Scheduled Data Scraping
+
+# Trigger the workflow on a schedule (e.g., daily at 2 am UTC)
+on:
+  schedule:
+    - cron: '45 07 * * *'  # This runs the workflow every day at 2 am UTC
+
+  # Allow manual run through GitHub interface
+  workflow_dispatch:
+
+# Define the job that GitHub Actions will run
+jobs:
+  run-script:
+    # Specify the environment GitHub should use
+    runs-on: ubuntu-latest
+
+    # Define the steps within the job
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v2  # Gets the code from your repository
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'  # Set the required Python version
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt  # Install dependencies from requirements.txt
+
+      - name: Run the scraping script
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}  # Inject secret variables
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+        run: |
+          python Main.py  # Run your Python script

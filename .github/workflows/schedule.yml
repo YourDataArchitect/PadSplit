@@ -18,10 +18,10 @@ jobs:
     # Define the steps within the job
     steps:
       - name: Check out the code
-        uses: actions/checkout@v2  # Gets the code from your repository
+        uses: actions/checkout@v3  # Gets the code from your repository
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.9'  # Set the required Python version
 

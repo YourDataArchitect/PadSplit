@@ -5,9 +5,7 @@ name: Scheduled Data Scraping
 on:
   schedule:
     - cron: '45 07 * * *'  # This runs the workflow every day at 2 am UTC
-
-  # Allow manual run through GitHub interface
-  workflow_dispatch:
+  workflow_dispatch: # Allow manual run through GitHub interface
 
 # Define the job that GitHub Actions will run
 jobs:
@@ -20,7 +18,6 @@ jobs:
       - name: Check out the code
         uses: actions/checkout@v3  # Gets the code from your repository
         
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -37,6 +34,7 @@ jobs:
           SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
         run: |
           python Main.py  # Run your Python script
+          
        # Upload the Excel file as an artifact
       - name: Upload Excel file
         uses: actions/upload-artifact@v3

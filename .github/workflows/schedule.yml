@@ -40,4 +40,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: scraped-data  # Name of the artifact
-          path: Temp_Output.xlsx  # Replace with the actual path to your Excel file
+          path: output/Temp_Output.xlsx  # Replace with the actual path to your Excel file
